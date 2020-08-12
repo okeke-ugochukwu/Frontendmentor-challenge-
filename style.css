@@ -3,7 +3,6 @@
 }
 body {
     font-family: 'Rubik', sans-serif;
-    overflow-x: hidden;
     background: hsl(0, 0%, 98%);
 }
 .gradient {
@@ -33,6 +32,7 @@ body {
     display: none;
 }
 .container {
+    overflow-x: hidden;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -272,5 +272,11 @@ body {
     #right p {
         width: 94%;
         text-align: left;
+    }
+    #forDeskTop {
+        display: block;
+    }
+    #forMobile {
+        display: none;
     }
 }
