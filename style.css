@@ -4,27 +4,33 @@
 body {
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
+    background: hsl(0, 0%, 98%);
 }
 .gradient {
     position: absolute;
     top: 0px;
-    left: -330px;
+    left: -530px;
     background: linear-gradient(200deg, hsl(293, 100%, 63%) -20%,hsl(264, 100%, 61%) 120% );
-    width: 500px;
+    width: 700px;
     height: 90%;
-    border-bottom-left-radius: 300px;
-    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 400px;
+    border-bottom-right-radius: 400px;
+    transition: .2s;
 }
 .gradient2 {
     position: absolute;
     bottom: 0;
     right: -330px;
-    opacity: 0.1;
+    opacity: 0.2;
     width: 500px;
     height: 50%;
-    background: hsla(264, 100%, 61%, 0.274);;
+    background: hsla(289, 50%, 35%, 0.123);
     border-top-left-radius: 300px;
     border-top-right-radius: 300px;
+    transition: .2s;
+}
+#forDeskTop {
+    display: none;
 }
 .container {
     position: absolute;
@@ -52,12 +58,12 @@ body {
     background: hsl(264, 26%, 96%);
     border: 10px solid white;
     border-radius: 40px;
-    width: 260px;
+    width: 265px;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.062);
     z-index: 1;
 }
 .uNotch {
-    width: 50%; 
+    width: 55%; 
     height: 24px;
     margin: auto; 
     background: white;
@@ -75,24 +81,37 @@ body {
     display: flex;
     margin-top: 15px;
 }
+.backIcon {
+    transform: rotate(45deg);
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    padding-top: 2px;
+}
 #avatar {
     width: 25px;
     height: 25px;
     border: 2px solid white;
     border-radius: 100px;
     margin-right: 10px;
-    margin-left: 40px;
+    margin-left: 7px;
 }
 .chatName {
     color: white;
     font-size: 12px;
     font-weight: 500;
+    margin-right: 75px;
 }
 #chatStatus {
     color: hsl(276, 100%, 81%);
     font-weight: 100;
     font-size: 9px;
     margin-top: 3px;
+}
+.optionsIcon {
+    color: white;
+    font-weight: bold;
+    padding-top: 2px;
 }
 .leftTextBubble {
     width: 55%;
@@ -149,29 +168,57 @@ body {
     margin-top: 100px;
 }
 #leftGradient {
+    width: 60%;
     color: white;
     padding: 12px;
+    padding-right: 16px;
     display: flex;
     background: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
 }
+.circle {
+    height: 11px;
+    width: 11px;
+    margin-right: 10px;
+    margin-top: -2px;
+    background: transparent;
+    border: 2px solid hsl(289, 100%, 72%);
+    border-radius: 50px;
+}
 .description {
-    width: 60%;
+    width: 70%;
 }
 .price {
-    font-size: 16px;
+    float: right;
+    font-size: 15px;
     font-weight: 600;
 }
 .replyTab {
-    width: 83%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 87%;
+    padding: 5px;
     margin: auto;
     margin-top: 15px;
+    margin-bottom: 14px;
     font-size: 10px;
-    padding: 15px 0 12px 25px;
     background: white;
     color: hsl(206, 6%, 79%);
     border-radius: 50px;
-    margin-bottom: 10px;
 }
+.placeholder {
+    width: 70%;
+    margin-left: 15px;
+    margin-right: 70px;
+}
+.sendIcon {
+    background:  hsl(271, 36%, 24%);
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
 #right {
     display: flex;
     flex-direction: column;
@@ -187,6 +234,7 @@ body {
 }
 #right p {
     width: 80%;
+    max-width: 700px;
     text-align: center;
     font-size: 16px;
     font-weight: normal;
@@ -194,18 +242,35 @@ body {
     color: hsl(270, 7%, 64%);
     line-height: 30px;
 }
-@media only screen and (min-width: 769px), only screen and (min-device-width: 769px) {
-    .gradient2 {
-        height: 90%;
+@media only screen and (min-width: 1025px) {
+    body {
+        overflow-y: hidden;
     }
-}
-@media only screen and (min-width: 1025px), only screen and (min-device-width: 1025px) {
     .gradient {
         height: 90%;
-        left: -200px;
+        width: 500px;
+        left: -100px;
     }
     .gradient2 {
         height: 90%;
-        right: -200px;
+        right: -150px;
+    }
+    .container {
+        flex-direction: row;
+        height: 90%;
+    }
+    .marginBox {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 68%;
+    }
+    #right {
+        align-items: flex-start;
+        margin-top: 0;
+        width: 50%;
+    }
+    #right p {
+        width: 94%;
+        text-align: left;
     }
 }
