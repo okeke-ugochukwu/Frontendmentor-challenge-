@@ -1,0 +1,211 @@
+*:focus {
+    outline: none; 
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+}
+.gradient {
+    position: absolute;
+    top: 0px;
+    left: -330px;
+    background: linear-gradient(200deg, hsl(293, 100%, 63%) -20%,hsl(264, 100%, 61%) 120% );
+    width: 500px;
+    height: 90%;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+}
+.gradient2 {
+    position: absolute;
+    bottom: 0;
+    right: -330px;
+    opacity: 0.1;
+    width: 500px;
+    height: 50%;
+    background: hsla(264, 100%, 61%, 0.274);;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+}
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.marginBox { 
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.subMarginBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.appOutline {
+    background: hsl(264, 26%, 96%);
+    border: 10px solid white;
+    border-radius: 40px;
+    width: 260px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.062);
+    z-index: 1;
+}
+.uNotch {
+    width: 50%; 
+    height: 24px;
+    margin: auto; 
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;  
+}
+.chatHeaderGradient {
+    width: 100%;
+    height: 80px;
+    border-radius: 30px 30px 5px 5px;
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+.chatHeaderAction {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+}
+#avatar {
+    width: 25px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 100px;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+.chatName {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+#chatStatus {
+    color: hsl(276, 100%, 81%);
+    font-weight: 100;
+    font-size: 9px;
+    margin-top: 3px;
+}
+.leftTextBubble {
+    width: 55%;
+    font-size: 9px;
+    font-weight: 400;
+    background: hsl(272, 46%, 93%);
+    color: hsl(276, 55%, 52%);
+    margin-left: 8px;
+    margin-top: 8px;
+    padding: 8px 0px 8px 8px;
+    border-radius: 13px 13px 13px 5px;
+    line-height: 13px;
+}
+.rightImageBubble {
+    height: 50px;
+    margin-top: 15px;
+    margin-right: 8px;
+}
+.rightImageBubblePositioner {
+    float: right;
+}
+.image {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    margin-left: 4px;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.034);
+}
+.rightTextBubble {
+    display: block;
+    float: right;  
+    padding: 8px 10px; 
+    font-size: 9px;
+    line-height: 13px;
+    width: max-content;
+    background: white;
+    color: hsl(271, 15%, 43%);
+    margin: 8px 8px 0px 50px;
+    border-radius: 13px 13px 5px 13px;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.034);
+}
+.rightTextBubble2 {
+    float: right;
+    display: block;
+    padding: 8px 10px; 
+    font-size: 9px;
+    background: white;
+    color: hsl(271, 15%, 43%);
+    margin: 8px 8px 0px 0px;
+    border-radius: 13px 12px 5px 13px;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.014);
+}
+#leftBubble2 {
+    margin-top: 100px;
+}
+#leftGradient {
+    color: white;
+    padding: 12px;
+    display: flex;
+    background: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+.description {
+    width: 60%;
+}
+.price {
+    font-size: 16px;
+    font-weight: 600;
+}
+.replyTab {
+    width: 83%;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 10px;
+    padding: 15px 0 12px 25px;
+    background: white;
+    color: hsl(206, 6%, 79%);
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+#right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+#right .textTitle {
+    font-size: 40px;
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+}
+#right p {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 30px;
+    color: hsl(270, 7%, 64%);
+    line-height: 30px;
+}
+@media only screen and (min-width: 769px), only screen and (min-device-width: 769px) {
+    .gradient2 {
+        height: 90%;
+    }
+}
+@media only screen and (min-width: 1025px), only screen and (min-device-width: 1025px) {
+    .gradient {
+        height: 90%;
+        left: -200px;
+    }
+    .gradient2 {
+        height: 90%;
+        right: -200px;
+    }
+}
